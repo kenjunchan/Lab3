@@ -79,8 +79,7 @@ public class HandPoker extends Hand {
 		}
 		return bisStraightFlush;
 	}
-	
-	// TODO : Implement this method
+
 	public boolean isFourOfAKind() {
 		boolean bisFourOfAKind = false;
 		if (this.getCRC().size() == 2) {
