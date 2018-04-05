@@ -132,8 +132,7 @@ public class HandPoker extends Hand {
 				break;
 		}
 
-		if (iSuitCnt == iCardCnt)
-		{
+		if (iSuitCnt == iCardCnt) {
 			HandScorePoker HSP = (HandScorePoker) this.getHS();
 			HSP.seteHandStrength(eHandStrength.Flush);
 			int iGetCard = this.getCRC().get(0).getiCardPosition();
@@ -160,8 +159,7 @@ public class HandPoker extends Hand {
 		
 		for(; a < super.getCards().size() - 1; a++)
 		{
-			if(super.getCards().get(a).geteRank().getiRankNbr() - 1 != super.getCards().get(a + 1).geteRank().getiRankNbr())
-			{
+			if(super.getCards().get(a).geteRank().getiRankNbr() - 1 != super.getCards().get(a + 1).geteRank().getiRankNbr()) {
 				HandScorePoker HSP = (HandScorePoker) this.getHS();
 				HSP.seteHandStrength(eHandStrength.Straight);
 				int iGetCard = this.getCRC().get(0).getiCardPosition();
@@ -203,7 +201,6 @@ public class HandPoker extends Hand {
 				HandScorePoker HSP = (HandScorePoker) this.getHS();
 				HSP.seteHandStrength(eHandStrength.TwoPair);
 				int iGetCard = this.getCRC().get(0).getiCardPosition();
-
 				HSP.setHiCard(this.getCards().get(iGetCard));
 				HSP.setLoCard(null);
 				HSP.setKickers(FindTheKickers(this.getCRC()));
